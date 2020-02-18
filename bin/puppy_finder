@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/Puppy_Finder'
+require_relative '../lib/puppy_finder'
 
 PuppyFinder::CLI.new.call
