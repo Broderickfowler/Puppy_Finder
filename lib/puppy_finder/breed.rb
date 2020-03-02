@@ -11,8 +11,8 @@ def initialize(name, info, location)
 end
 
 def self.all
-  PuppyFinder::Scraper.scrape_breed if @@all.empty?
-  @@all
+  PuppyFinder::Scraper.scrape_breed if @@all.empty? # Use scraper if @@all is empty
+  @@all # class ver
 end
 
 def save

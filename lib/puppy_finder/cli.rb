@@ -1,16 +1,16 @@
 class PuppyFinder::CLI
 
   def call
-    PuppyFinder::Scraper.scrape_breed
+    PuppyFinder::Scraper.scrape_breed #Go into the scrapper class and scrape for all the breeds of puppies
     puts "\nWelcome to Puppy Adopation App\n"
     puts "\nWhere you can find select breeds in San Diego\n"
 
-    list_puppies
+    list_puppies 
     more_info
     thanks
   end
 
-  def list_puppies
+  def list_puppies #
     puts "\nPlease choose you new family member!!\n"
     breed = PuppyFinder::Breed.all
     breed.each.with_index(1) do |breed, index|
