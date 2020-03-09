@@ -1,7 +1,8 @@
 class PuppyFinder::CLI
 
   def call
-    PuppyFinder::Scraper.scrape_breed #Go into the scrapper class and scrape for all the breeds of puppies
+    PuppyFinder::Scraper.scrape_breed 
+    binding.pry#Go into the scrapper class and scrape for all the breeds of puppies
     puts "\nWelcome to Puppy Adopation App\n"
     puts "\nWhere you can find select breeds in San Diego\n"
 
@@ -45,35 +46,6 @@ class PuppyFinder::CLI
 end
   end
 
-
-=begin
-  def list_puppy
-    @breed.each.with_index(1) do |breed, index|
-      puts "#{index}. #{breed.name} - #{breed.info}"
-    end
-  end
-
-
-  def get_user_breed
-    puts "\nWhich puppy would you like to know more about? Or type 'exit'\n"
-
-    chosen_breed = gets.strip.to_i
-    show_puppies_for(chosen_breed) if void_input(chosen_breed, @breed)
-  end
-
-
-  def void_input(input, data)
-    input.to_i <= data.length && input.to_i > 0
-  end
-
-  def show_puppies_for(chosen_breed)
-    breed = @breed[chosen_breed - 1]
-    puts " "
-    puts " #{breed.name} Beautiful choice"
-    puts " #{breed.info}"
-    puts " #{}"
-  end
-=end
   def thanks
     puts "Thank you for your support in providing a forever home! Happy Adopation"
   end
